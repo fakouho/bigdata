@@ -1,0 +1,10 @@
+package Ifelse문;
+
+public class Ex03마트계산대프로그램 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

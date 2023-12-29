@@ -1,0 +1,14 @@
+package Ifelse문;
+
+import java.util.Scanner;
+
+public class Ex02ifelso문 {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("====에버랜드에 오신 걸 환영합니다.===");
+				
+
+	}
+
+}

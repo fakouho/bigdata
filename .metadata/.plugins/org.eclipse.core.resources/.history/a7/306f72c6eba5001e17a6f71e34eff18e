@@ -1,0 +1,10 @@
+package 단순if문;
+
+public class Ex02단순if문예제 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

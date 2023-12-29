@@ -1,0 +1,10 @@
+package 삼항연산자;
+
+public class Ex01삼항연산자예제 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

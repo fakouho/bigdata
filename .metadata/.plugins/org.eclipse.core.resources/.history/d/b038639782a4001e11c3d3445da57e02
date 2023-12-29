@@ -1,0 +1,80 @@
+package 변수및자료형;
+
+public class Exo1입출력 {
+
+	public static void main(String[] args) {
+
+		//주석 : 코드에 영향을 끼치지 않는 메모자 역활을함 
+		//단축키 1) 글자크기 변경 : ctrl +-
+	    //     2) 한 줄 삭제 : ctrl d
+		
+		
+		//1.번 출력문
+		System.out.println("Hello World!");
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	}
+
+}

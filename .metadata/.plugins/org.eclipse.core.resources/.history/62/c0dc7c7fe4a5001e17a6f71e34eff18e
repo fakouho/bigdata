@@ -1,0 +1,28 @@
+package 삼항연산자;
+
+import java.util.Scanner;
+
+public class Ex02삼항연산자예제 {
+
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		//스캐너
+		
+	System.out.print("정수를 입력하세요 : ");
+	//정수를 입력하세요
+	
+	int num1 = sc.nextInt();
+	//정수를 입력받고 변수지정
+	
+	String result = num1%2 ==0 ? num1 + "은(는) 짝수입니다" : "은(는) 홀수입니다.";
+	//문작을 이어나가며 상향연산자를 사용 
+	
+	System.out.println(result);
+	//출력문으로 출력
+		
+		
+
+	}
+
+}

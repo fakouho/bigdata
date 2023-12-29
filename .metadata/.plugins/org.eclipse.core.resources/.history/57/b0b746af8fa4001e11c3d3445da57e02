@@ -1,0 +1,10 @@
+package 변수및자료형;
+
+public class Ex03변수명 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

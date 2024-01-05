@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2024-01-05T05:55:07.613Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36 Edg/120.0.0.0" etag="Jxox5szFvanoxQIEn5yR" version="22.1.16" type="github">
+<mxfile host="app.diagrams.net" modified="2024-01-05T05:59:36.337Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36 Edg/120.0.0.0" etag="7Df5czevwtvj8pUmGAEf" version="22.1.16" type="github">
   <diagram name="페이지-1" id="5Jl4SzN_hp-mwgGUdTvq">
     <mxGraphModel dx="1177" dy="1117" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -545,8 +545,8 @@
             <mxPoint x="490" y="560" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="SiVwylJ5EB0Y_QVnNuF0-150" value="논리적 모델링" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
-          <mxGeometry x="364" y="40" width="100" height="30" as="geometry" />
+        <mxCell id="SiVwylJ5EB0Y_QVnNuF0-150" value="논리적 모델링&lt;br&gt;&lt;font&gt;&amp;nbsp;진주강&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="364" y="35" width="100" height="40" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>

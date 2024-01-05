@@ -1,9 +1,0 @@
-package 산술연산자;
-
-public class Ex04산술연산자 {
-
-	public static void main(String[] args) {
-		
-	}
-
-}

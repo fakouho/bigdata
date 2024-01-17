@@ -1,3 +1,4 @@
 PROJECT_OPEN_NEW_PERSPECTIVE=NO_NEW_PERSPECTIVE
+SHOW_MEMORY_MONITOR=true
 eclipse.preferences.version=1
 showIntro=false

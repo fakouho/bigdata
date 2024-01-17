@@ -1,0 +1,297 @@
+--------------------------------DB문답-------------------------------
+1) 개체는 무엇인가
+정답) 고객, 주문서
+2) 고객의 속성을 기술하시요
+정답) 고객번호, 성명, 주소
+3) 주문서의 속성을 기술하시요
+정답) 주문번호, 품명, 수량, 금액
+4) 고객과 주문서의 주문 관계는 어떤 관계((대응 수, 다중도) 가 있는가
+정답) 1;N
+5) 고객과 주문서의 주문 관계를 고객측면과 주문서 측면에서 설명하시요. 
+정답) - 한사람의 고객은 여러 주문을 할 수있다. 
+정답) - 한 개의 주문서는 한사람의 고객에서부터 나온다. 
+6) 기본 키(Primary Key) 속성을 기술하시요
+정답) 고객번호, 주문번호
+
+1:N 관계일때는 N쪽에 FK(외래키) 즉 1쪽의 PK를 FK로 가지고온다.
+
+-- SQL코드 작성
+
+-- 고객 테이블 생성
+CREATE TABLE t_cus (
+    고객번호 INT PRIMARY KEY,
+    성명 VARCHAR(255),
+    주소 VARCHAR(255)
+);
+
+-- 주문서 테이블 생성
+CREATE TABLE t_order (
+    주문번호 INT PRIMARY KEY,
+    품명 VARCHAR(255),
+    수량 INT,
+    금액 INT,
+    고객번호 INT,
+    FOREIGN KEY (고객번호) REFERENCES t_cus(고객번호)
+);
+
+-- t_cus 테이블에 데이터 추가
+INSERT INTO t_cus
+(고객번호, 성명, 주소)
+VALUES
+('001', '가길동', 수원시),
+('002', '나길동', 안산시),
+('003', '조길동', 서울시),
+('004', '홍길동', 안양시),
+ 
+-- t_order 테이블에 데이터 추가
+INSERT INTO t_order
+(주문번호, 품명, 수량, 금액, 고객번호)
+VALUES
+('101', '사과', 2,'300','001'),
+('102', '우유', 3,200,'001'),
+('103', '시금치', 4,100,'002'),
+('104', '콜라',7,200.'002'),
+
+--고객번호 003번이 주문한 주문 내용을 아래 처럼 출력하는 SQL문장을 기술하시요.(join쿼리)
+
+select 성명, 주소, 품명, 수량, 금액
+from t_cus ts
+inner join t_order tr
+on ts.고객번호 = tr.고객번호
+where 고객번호 = '001'; 
+
+-- 고객번호 002번이 주문한 주문의 총 금액은 얼마인가?
+
+select sum(금액)
+from t_cus ts
+inner join t_order tr
+on ts.고객번호 = tr.고객번호
+where 고객번호 = '002';
+
+-- 주문테이블을 보고 고객번호별 주문 금액의 총합을 구하여 출력하시오.(group by절 사용)
+
+select 고객번호, sum(금액)
+from t_order
+group by 고객번호;
+
+-- 고객테이블에서 이름을 기준으로 고객을 내림차순으로 정렬하여 출력하시오.
+
+select 고객번호,
+
+
+
+
+
+SELECT * FROM haksa.student;
+
+select dp.department_name, count(st.student_name) as cnt
+from student st
+inner join department dp
+on dp.department_code = st.department_code
+group by department_name
+order by cnt desc
+limit 1;
+
+
+-- 서브쿼리
+select department_name
+from department
+where department_code=(
+select department_code from student
+group by department_code
+having count(department_code)=(
+	select count(department_code) cnt from student group by department_code
+    order by cnt desc limit 1
+    )
+);
+
+-- 학생 중 성이 아인 학생이 속한 학과명과 학생명을 출력하세요
+select department_name, student_name
+from student st
+inner join department dp
+on st.department_code = dp.department_code
+where student_name like '아%';
+
+-- 키가 175~180 사이에 속한 학생수를 출력하세요.
+select count(student_id) as 학생수
+from student
+where student_height between 175 and 180;
+-- where 180 > student_height && student_height >=175;
+
+-- 다길동 학생과 같은 학과에 속한 학생의 이름을 출력하세요
+-- 서브쿼리 사용
+select * from student st
+where st.department_code =(
+	select s.department_code from student s
+	where s.student_name like '아길동'
+);
+
+-- 학과별 키의 최고값(max)과 평균값(average)을 출력하시오
+
+select dp.department_name, max(student_height ) as 최고값, avg(student_height) as 평균값
+from student st
+inner join department dp
+on st.department_code = dp.department_code
+group by dp.department_name;
+
+-- 개설과목
+INSERT INTO Course (course_name, professor_id, start_date, 
+end_date) VALUES
+('교양 영어', 1, '2023-07-01', '2023-08-15'),
+('데이터베이스 입문', 2, '2023-07-01', '2023-08-31'),
+('회로이론', 3, '2023-07-15', '2023-09-15'),
+('공학수학', 4, '2023-07-15', '2023-09-30'),
+('객체지향 프로그래밍', 5, '2023-07-01', '2023-08-31');
+
+-- 빌게이츠 교수가 가르치는 과목이름을 출력하세요
+select *
+from professor p
+inner join course c
+on p.professor_id = c.professor_id
+where p.professor_name = '빌 게이츠';
+
+select student_name
+from student st
+where st.department_code=(
+	select st.department_code
+    from student st    
+    where student_name like '아%'
+);
+
+select department_name, max(student_height), avg(student_height)
+from department dp
+inner join student st
+on dp.department_code = st.department_code
+group by department_name;
+
+select course_name
+from professor p
+inner join course c
+on p.professor_code = c.professor_code
+where professor_name like '빌 게이츠';
+
+select  from haksa_real.student_course;
+select  from course;
+select  from professor;
+select  from department;
+select  from student;
+
+-- 과목별 수강자 수를 출력하시오 ( 과목이름, 수강자수)
+select c.course_name, count() as cnt
+from course c
+inner join student_course sc
+on c.course_code = sc.course_code
+group by c.course_name;
+-- having cnt=2
+-- order by c.course_name asc;
+
+-- 빌게이츠 교수의 과목을 수강 신청한 학생수
+
+select count(student_id)
+from haksa_real.student_course sc
+	where course_code =(
+	select c.course_code
+	from course c
+		where professor_code =(
+		select p.professor_code
+		from professor p
+		where p.professor_name = '빌 게이츠'
+)
+);
+
+-- 스티브 잡스 교수의 과목을 수강신청한 학생이름을 출력하세요.
+
+select department_name, student_name
+from department d
+inner join 
+(select student_name, department_code
+from student st
+where student_id in (
+select student_id
+from student_course sc
+where course_code =(
+select course_code
+from course c
+where professor_code=(
+select professor_code
+from professor
+where professor_name = '스티브 잡스'
+)
+)
+) 
+) A
+on A.department_code=d.department_code;
+
+-- 주분테이블에서 CUST005 고객이 주문한 제품의 이름을 출력하세요
+select product_name
+from product
+where product_number in (
+select product_number
+from customer_product
+where customer_id = 'CUST005'
+);
+
+-- 주문테이블에서 나이가 30세 이상인 고객이 
+-- 주문한 제품의 번호와 주문일자를 출력하시오
+
+select * from customer;
+select * from customer_product;
+select * from product;
+
+select product_number, order_date
+from customer_product
+where customer_id in (
+select customer_id
+from customer
+where age > 30
+);
+
+
+select * from customer;
+select * from customer_product;
+select * from product;
+-- 고객 테이블에서 적립금 평균이 80원 이상인 등급에 대해
+-- 등급별 고객수와 적립금 평균을 출력하세요.
+
+select rating, count(*) cnt, avg(reserves) as 평균
+from customer
+group by rating
+having 평균 >= 80;
+
+
+select * from customer;
+select * from customer_product;
+select * from product;
+-- 주문테이블에서 적립금이 가장 많은 고객의 고객이름과 적립금을 출력하세요
+select customer_name, max(reserves) as mx
+from customer
+group by customer_name
+order by mx desc limit 1;
+
+select customer_name, reserves
+from customer
+where reserves=(
+	select max(reserves)
+    from customer
+);
+
+
+select * from customer;
+select * from customer_product;
+select * from product;
+-- 주문테이블에서 CUST005 고객이 주문한 제품의 이름과 제조업체를 출력하세요.
+
+select product_name, manufacturer
+from product 
+where product_number in (
+select product_number
+from customer_product
+where customer_id = "CUST005"
+);
+
+
+
+
+
+
+

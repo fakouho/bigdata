@@ -5,9 +5,9 @@ public class Ex02별찍기 {
 	public static void main(String[] args) {
 
  		//     1.        2.    3.
-		for (int w = 1; w < 6; w++) {
+		for (int w = 5; w > 0; w++) {
         //         4.        5.     6. 
-			for (int q = 0; q <w; q++) {
+			for (int q = 0; q >w; q++) {
 				//     7.
 				System.out.print("*");
 			}

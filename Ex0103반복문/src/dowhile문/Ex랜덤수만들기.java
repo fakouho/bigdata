@@ -13,7 +13,7 @@ public class Ex랜덤수만들기 {
 		//0부터 시작해서 추출하고 싶은 숫자의 갯수를 적기
 		//1~9추출
 		int num = ran.nextInt(9)+1;
-		System.out.println(num);
+		
 		
 		
 		

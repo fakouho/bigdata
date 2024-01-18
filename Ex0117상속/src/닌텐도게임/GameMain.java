@@ -14,6 +14,8 @@ public class GameMain {
 		insert(m);
 		Zelda z = new Zelda();
 		insert(z);
+		Dongmul d = new Dongmul();
+		insert(d);
 		
 		
 		
@@ -21,7 +23,7 @@ public class GameMain {
 		
 	}
 	// 게임칩을 끼우는 기능
-	private static void insert(Pokemon game) {
+	private static void insert(GameChip game) {
 		game.gameStart();
 		
 	}

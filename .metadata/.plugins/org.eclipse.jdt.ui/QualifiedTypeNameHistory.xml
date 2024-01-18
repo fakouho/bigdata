@@ -5,12 +5,23 @@
     <fullyQualifiedTypeName name="java.util.Arrays"/>
     <fullyQualifiedTypeName name="OOP기초.Person"/>
     <fullyQualifiedTypeName name="학생정적관리프로그램.Student"/>
-    <fullyQualifiedTypeName name="java.util.Random"/>
     <fullyQualifiedTypeName name="객체배열.Pokemon"/>
     <fullyQualifiedTypeName name="java.lang.reflect.Array"/>
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="ArrayList.Student"/>
     <fullyQualifiedTypeName name="java.lang.System"/>
     <fullyQualifiedTypeName name="javazoom.jl.player.MP3Player"/>
+    <fullyQualifiedTypeName name="java.util.Random"/>
+    <fullyQualifiedTypeName name="java.nio.file.spi.FileSystemProvider"/>
     <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="닌텐도게임.Pokemon"/>
+    <fullyQualifiedTypeName name="닌텐도게임.GameChip"/>
+    <fullyQualifiedTypeName name="닌텐도게임.Dongmul"/>
+    <fullyQualifiedTypeName name="javax.print.DocFlavor.STRING"/>
+    <fullyQualifiedTypeName name="java.lang.String"/>
+    <fullyQualifiedTypeName name="월급계산프로그램.RegularEmployee"/>
+    <fullyQualifiedTypeName name="월급계산프로그램.TempEmployes"/>
+    <fullyQualifiedTypeName name="javax.swing.text.html.ParagraphView"/>
+    <fullyQualifiedTypeName name="월급계산프로그램.PratTimeEmployee"/>
+    <fullyQualifiedTypeName name="월급계산프로그램.Employee"/>
 </qualifiedTypeNameHistroy>

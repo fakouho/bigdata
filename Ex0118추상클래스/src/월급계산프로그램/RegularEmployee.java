@@ -10,6 +10,7 @@ public class RegularEmployee extends Employee{
 	//=======================필드================	
 	public RegularEmployee(String empno, String name, int pay, int bonus) {
 		super(empno, name, pay);//상속하는(매개변수)
+		
 		this.bonus = bonus;
 	}
 	//=====================생성자	

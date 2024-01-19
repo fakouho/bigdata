@@ -16,6 +16,7 @@ public abstract class Employee {
 	}
 	
 	public abstract int getMoneyPay();
+	// abstract = 중괄호 생략
 
 	public String print() {
 
